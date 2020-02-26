@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Louie's Coding Camp - The Box Model.">
+		
+        <title>The Box Model</title>
+		
+        <link rel="stylesheet" type="text/css" href="BoxModel.css">
+		
+    </head>
+	
+	<body>
+		
+		<div class="grid-container">
+		
+			<button onclick="topFunction()" id="button" title="Go to top">Top</button>
+		
+			<div class="top left side"></div>
+            <div class="top right side"></div>
+			
+			<div class="bottom left side"></div>
+            <div class="bottom right side"></div>
+		
+			<!----------------------------------HEADER---------------------->
+			
+			<div class="grid header">				
+						
+				<!----SITE LOGO----->
+				<div class="grid logo"><img src="images/logo.jpg" height="100" width="100"/></div>
+				
+				<!----SITE NAME----->
+				<div class="grid name">
+					<a href="./LandingPage.html"><p class="LogoName">LOUIE'S <strong>CODE CAMP</strong></p></a>
+				</div>
+				
+				<!----NAV BAR----->
+				<div class="grid nav">
+					<ul class="top">
+						<li class="chosen">The Box Model</li>
+						<a href="./Forms.html"><li>Forms</li></a>
+						<li><a href="./Grids.html">Grids</a></li>
+						<li><a href="./AskMe.html">Ask Me!</a></li>
+					</ul>
+				</div>
+						
+			</div>
+						
+			<!-----------------------------------MAIN------------------------------>
+
+			<div class="grid main text">
+						
+				<h2>The Box Model</h2>
+				
+				<h3>If you have used HTML and CSS, you have unknowingly seen aspects of the box model. For example, if you have set the background color of an element,
+				you may have noticed that the color was applied not only to the area directly behind the element, but also to the area to the right of the element.
+				Also, if you have aligned text, you know it is aligned relative to something. What is that something?
+				<br>
+				All elements on a web page are interpreted by the browser as “living” inside of a box. This is what is meant by the box model.
+				For example, when you change the background color of an element, you change the background color of its entire box.</h3>
+			
+			</div>
+				
+			<div class="grid main image"><img src="images/BOXMODELIMAGEALT.png" height="300" width="450"/></div>
+			
+			<!----------------------------------DIVIDER---------------------->
+			
+			<div class="grid divider">
+				<img src="images/CLOUDDIVIDER.jpg" height="100" width="1200"/>
+			</div>
+			
+			<!---------------------------------PROPERTIES---------------------->
+			
+			<div class="grid properties">
+				
+				<br>
+				<br>
+				
+				<h2>Properties</h2>
+			
+				<h3>The properties include: </h3>
+				
+				<ol>
+					<li>Width and height — specifies the width and height of the content area</li>
+					<li>Padding — specifies the amount of space between the content area and the border</li>
+					<li>Border — specifies the thickness and style of the border surrounding the content area and padding</li>
+					<li>Margin — specifies the amount of space between the border and the outside edge of the element</li>
+				</ol>
+
+			</div>
+			
+			<!---------------------------------HEIGHT AND WIDTH---------------------->
+									
+			<div class="grid heightandwidth">
+				
+				<br>
+				
+				<span class="faded-line"></span>
+				
+				<br>
+				
+				<h2>Height and Width</h2>
+			
+				<h3>By default, the dimensions of an HTML box are set to hold the raw contents of the box. The CSS height and width properties can be used to modify 
+				these default dimensions</h3>
+			
+				<code>
+					p {<br>
+						<div class="indent">height: 80px;<br></div>
+						<div class="indent">width: 240px;<br></div>
+					<div class="indent1">}</div>
+				</code>
+			
+				<h3>In this example, the height and width of paragraph elements are set to 80 pixels and 240 pixels, respectively — the px in the
+				code above stands for pixels</h3>
+			
+			</div>
+				
+			<!---------------------------------BORDERS---------------------->
+			
+			<div class="grid borders">
+				
+				<br>
+				
+				<span class="faded-line"></span>
+				
+				<br>
+				
+				<h2>Borders</h2>
+				
+				<h3>A border is a line that surrounds an element, like a frame around a painting. Borders can be set with a specific <em>width</em>, 
+				<em>style</em>, and <em>color</em>.</h3>
+				
+				<ol>
+					<li>Width — The thickness of the border. A border's thickness can be set in pixels or with one of the following keywords: thin, medium, or thick</li>
+					<li>Style — The design of the border. Web browsers can render any of 10 different styles. Some of these styles include: none, dotted, and solid</li>
+					<li>Color — The color of the border. Web browsers can render colors using a few different formats, including 140 built-in color keywords</li>
+				</ol>
+				
+				<code>
+					p {<br>
+						<div class="indent">border: 3px solid coral;<br></div>
+					<div class="indent1">}</div>
+				</code>
+				<h3>In the example above, the border has a width of 3 pixels, a style of solid and a color of coral. All three properties are set in one line of code <br>
+				The default border is medium none color, where color is the current color of the element.</h3>
+				
+				<code>
+					p.content-header {<br>
+						<div class="indent">height: 80px;<br></div>
+						<div class="indent">width: 240px;<br></div>
+						<div class="indent">border: solid coral;<br></div>
+					<div class="indent1">}</div>
+				</code>
+				
+				<h3>In this example, the border style is set to solid and the color is set to coral. The width is not set, so it defaults to medium.</h3>
+				
+				<br>
+				
+				<h2>Border Radius</h2>
+								
+				<h3>Thanks to CSS, a border doesn't have to be square. You can modify the corners of an element's border box with the border-radius property.</h3>
+				
+				<code>
+					div.container {
+						<div class="indent">border: 3px solid rgb(22, 77, 100);</div>
+						<div class="indent">border-radius: 5px;</div>
+					<div class="indent1">}</div>
+				</code>
+				
+				<h3>The code in the example above will set all four corners of the border to a radius of 5 pixels (i.e. the same curvature that a circle with radius 5 pixels would have). 
+				You can create a border that is a perfect circle by setting the radius equal to the height of the box, or to 100%.</h3>
+				
+				<code>
+					div.container {<br>
+						<div class="indent">height: 60px;<br></div>
+						<div class="indent">width: 60px;<br></div>
+						<div class="indent">border: 3px solid rgb(22, 77, 100);<br></div>
+						<div class="indent">border-radius: 100%;<br></div>
+					<div class="indent1">}</div>
+				</code>
+				
+				<h3>The code in the example above creates a <div> that is a perfect circle.</h3>
+				
+			</div>
+			
+			<!---------------------------------PADDING---------------------->
+						
+			<div class="grid padding">
+				
+				<br>
+				
+				<span class="faded-line"></span>
+				
+				<br>
+				
+				<h2>Padding</h2>
+				
+				<h3>The space between the contents of a box and the borders of a box is known as padding. Padding is like the space between a picture and the frame surrounding it. In CSS, you can modify 
+				this space with the padding property.</h3>
+				
+				<code>
+					p.content-header {<br>
+						<div class="indent">border: 3px solid coral;<br></div>
+						<div class="indent">padding: 10px;<br></div>
+					<div class="indent1">}</div>
+				</code>
+				
+				<h3>The code in this example puts 10 pixels of space between the content of the paragraph (the text) and the borders, on all four sides.<br>
+				If you want to be more specific about the amount of padding on each side of a box's content, you can use the following properties:</h3>
+				
+				<ol>
+					<li>padding-top</li>
+					<li>padding-right</li>
+					<li>padding-bottom</li>
+					<li>padding-left</li>
+				</ol>
+				
+				<code>
+					p.content-header {<br>
+						<div class="indent">border: 3px solid fuschia;<br></div>
+						<div class="indent">padding-bottom: 10px;<br></div>
+					<div class="indent1">}</div>
+				</code>
+				
+			</div>
+			
+			<!---------------------------------MARGINS---------------------->
+			
+			<div class="grid margins">
+			
+				<br>
+			
+				<span class="faded-line"></span>
+				
+				<br>
+				
+				<h2>Margins</h2>
+				
+				<h3>The margin property is used to specify the size of this space.</h3>
+				
+				<code>
+					p {<br>
+						<div class="indent">border: 1px solid aquamarine;<br></div>
+						<div class="indent">margin: 20px;<br></div>
+					<div class="indent1">}</div>
+				</code>
+				
+				<h3>The code in the example above will place 20 pixels of space on the outside of the paragraph's box on all four sides. This means that other HTML elements on the page cannot 
+				come within 20 pixels of the paragraph's border. <br> If you want to be even more specific about the amount of margin on each side of a box, you can use the following properties:</h3>
+				
+				<ol>
+					<li>margin-top</li>
+					<li>margin-right</li>
+					<li>margin-bottom</li>
+					<li>margin-left</li>
+				</ol>
+				
+				<code>
+					p {<br>
+						<div class="indent">border: 3px solid DarkSlateGrey;<br></div>
+						<div class="indent">margin-right: 15px;<br></div>
+					<div class="indent1">}</div>
+				</code>
+				
+				<h3>In the example above, only the right side of the paragraph's box will have a margin of 15 pixels.</h3>
+								
+				<span class="faded-line"></span>
+				
+				<br><br>
+				
+				<h3><a class="bottom-link" href="https://www.w3schools.com/css/css_boxmodel.asp">Click here</a> to learn more indepth about the Box Model.</h3>
+			
+				<br><br>
+				
+			</div>
+			
+			
+			<!-------------------------------------------------------------->
+			
+		
+		
+		</div>
+	
+	<script>
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			document.getElementById("button").style.display = "block";
+		} else {
+			document.getElementById("button").style.display = "none";
+		}
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+	</script>
+
+	</body>
+	
+</html>

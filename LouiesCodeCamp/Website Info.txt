@@ -1,0 +1,17 @@
+Color Scheme:
+
+Dark Green:                   rgb(59, 161, 150) / #3ba196
+Light Green:                  rgb(86, 193, 149) / #56c195
+
+Background Dark Blue #1:      rgb(69, 105, 144) / #456990 
+Background Dark(er) Blue #2:  rgb(32, 48 , 66)  / #203042 (old)
+
+Accent:  (Orange)                               / #FFAA49
+Grey:				                / #EAECED
+
+_______
+Background Dark(er) Blue #2:  rgb(31, 47, 61)   / #1f2f3d (new)
+Dark Green:                   rgb(59, 161, 150) / #3ba196
+Grey:				                / #EAECED
+White:						/ #fcfeff
+_______

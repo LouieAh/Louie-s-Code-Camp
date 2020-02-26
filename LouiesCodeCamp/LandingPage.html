@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="A HTML/CSS learning website.">
+		
+        <title>Louie's Coding Camp</title>
+		
+        <link rel="stylesheet" href="LandingPage.css">
+		
+		
+    </head>
+    
+<!-------------------------------------------------------------------------------------------------------------------->    
+    
+    <body>
+        
+        <div class="grid-container">
+		
+			<button onclick="topFunction()" id="button" title="Go to top">Top</button>
+			
+            <div class="left side top"></div>
+            <div class="right side top"></div>
+			<div class="left side bottom"></div>
+            <div class="right side bottom"></div>
+			
+            <!-----------------------------Top Bar--------------------------------->
+            <div class="grid logo"><img src="images/logo.jpg" height="100" width="100"/></div>
+			
+            <div class="grid name">
+				<p class="LogoName">LOUIE'S <strong>CODE CAMP</strong></p>
+			</div>
+			
+            <div class="grid nav">
+                <ul>
+                    <li><a href="./BoxModel.html">The Box Model</a></li>
+                    <li><a href="./Forms.html">Forms</a></li>
+                    <li><a href="./Grids.html">Grids</a></li>
+                    <li><a href="./AskMe.html">Ask Me!</a></li>
+                </ul>
+            </div>
+			
+			<!------------------------------Main--------------------------------->
+            <div class="grid main-text">
+				<div>
+					<h1>Welcome to Louie's Code Camp!</h1>
+					<h2>Here you are able to learn about crucial subjects to do with the Computer Science course delivered at the Newcastle University for Year One.</h2>
+				</div>
+			</div>
+			
+            <div class="grid main-image"><img src="images/illustrationMain.jpg" /></div>
+            
+            <div class="grid divider"><img src="images/CLOUDDIVIDER.jpg" height="75" width="1200"/></div>
+            
+			<!------------------------------Box Model--------------------------------->
+            <div class="grid boxModel-text a">
+				<h2><span class="numbers">1. </span>The Box Model</h2>
+				<h3>Browsers load HTML elements with default positional values. All elements on a web page are interpreted by the browser as "living" inside of a box.</h3>
+			</div>
+			
+            <div class="grid boxModel-image"><img src="images/BOXMODELIMAGEALT.png" height="200" width="300"/></div>
+			
+            <!------------------------------Forms--------------------------------->
+            <div class="grid forms-image"><img src="images/FORMGIF.gif" height="200" width="300"/></div>
+			
+            <div class="grid forms-text a">
+				<h2><span class="numbers">2. </span>Forms</h2>
+				<h3>Think of the times you've had to fill out information for various applications like a job, or a bank account, or dropped off a completed suggestion card — each instance is a form. Just like physical form, a HTML &lt;form&gt; element is responsible for collecting information to send somewhere else.</h3>
+			</div>
+			
+            <!------------------------------Grids--------------------------------->
+            <div class="grid grids-text a">
+			<h2><span class="numbers">3. </span>Grids</h2>
+			<h3>This 2-dimensional layout system with rows and columns allows the user to create web pages without having to use floats and positioning. It is one of the most powerful tools in a web developers arsenal.</h3>
+			</div>
+			
+            <div class="grid grids-image"><img src="images/GRIDSIMAGE.png" height="200" width="300"/></div>
+            
+			<!------------------------------Benefits--------------------------------->
+            <div class="grid benefits a">
+			
+				<span class="faded-line"></span>
+				
+				<h1>The benefits to you</h1>
+				<h3>This website will not bore you with the finicky details of each topic, but will deliver the basics of what you need to know in a thorough yet efficient manner. There will be no fluff here, yet purely the basics of what is needed to know on each topic so that you can leave with enough knowledge to use it yourself practically.</h3>
+								
+			</div>
+            
+			<!------------------------------Author--------------------------------->
+            <div class="grid author">
+			
+				
+				<br>
+				
+				<img src="images/AUTHORIMAGE.jpg" height="250" width="200"/>
+				
+				<div class="author-text a">
+					<h2>Meet the Author</h2>
+					<h3><q>My Name is Louie Holbrook and I am a first year student at Newcastle University! I grew up in London and have previously studied at University of Liverpool doing Electronic Engineering with Computer Science, but after a few months of that I'd had enough of the electronics and decided it was purely computer science I was passionate about.</q></h3>
+				</div>
+				
+			</div>
+            
+			<!------------------------------Footer--------------------------------->
+            <div class="grid footer"></div>
+            
+			<!--------------------------------------------------------------->
+            
+			
+        </div>
+    
+	
+	<!------------------------------JAVASCRIPT--------------------------------------->
+	<script>
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			document.getElementById("button").style.display = "block";
+		} else {
+			document.getElementById("button").style.display = "none";
+		}
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+	</script>
+	
+        
+    </body>
+    
+    
+    
+</html>

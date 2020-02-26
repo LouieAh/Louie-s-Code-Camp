@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Louie's Coding Camp - Forms.">
+		
+        <title>Forms</title>
+		
+        <link rel="stylesheet" type="text/css" href="Forms.css">
+		
+    </head>
+	
+	<body>
+		
+		<div class="grid-container">
+		
+			<button onclick="topFunction()" id="button" title="Go to top">Top</button>
+		
+			<div class="top left side"></div>
+            <div class="top right side"></div>
+			
+			<div class="bottom left side"></div>
+            <div class="bottom right side"></div>
+		
+			<!----------------------------------HEADER---------------------->
+			
+			<div class="grid header">				
+						
+				<!----SITE LOGO----->
+				<div class="grid logo"><img src="images/logo.jpg" height="100" width="100"/></div>
+				
+				<!----SITE NAME----->
+				<div class="grid name">
+					<a href="./LandingPage.html"><p class="LogoName">LOUIE'S <strong>CODE CAMP</strong></p></a>
+				</div>
+				
+				<!----NAV BAR----->
+				<div class="grid nav">
+					<ul class="top">
+						<a href="./BoxModel.html"><li>The Box Model</li></a>
+						<li class="chosen">Forms</li>
+						<li><a href="./Grids.html">Grids</a></li>
+						<li><a href="./AskMe.html">Ask Me!</a></li>
+					</ul>
+				</div>
+						
+			</div>
+						
+			<!-----------------------------------MAIN------------------------------>
+
+			<div class="grid main text">
+						
+				<h2>HTML Forms</h2>
+				
+				<h3>Think of the times you've had to fill out information for various applications like a job, or a bank account, or dropped off 
+				a completed suggestion card — each instance is a form. Just like a physical form, an HTML <form> element is responsible for collecting information to send somewhere else</h3>
+			
+			</div>
+				
+			<div class="grid main image"><img src="images/FORMGIF.gif" height="300" width="450"/></div>
+			
+			<!----------------------------------DIVIDER---------------------->
+			
+			<div class="grid divider">
+				<img src="images/CLOUDDIVIDER.jpg" height="100" width="1200"/>
+			</div>
+			
+			<!---------------------------------ACTION & METHOD ATTRIBUTE---------------------->
+			
+			<div class="grid action-and-method-attributes">
+				
+				<br>
+				<br>
+				
+				<h2>Action and Method Attributes - an Introduction</h2>
+			
+				<h3>Computers need an HTTP request to know how to communicate. The HTTP request instructs the receiving computer how to handle the incoming information. 
+				The &lt;form&gt; element is a great tool for collecting information, but then we need to send that information somewhere else for processing. 
+				We need to supply the &lt;form&gt; element with both the location of where the &lt;form&gt;'s information goes and what HTTP request to make.</h3>
+				
+				<code>
+					&lt;form action="/example.html" method="POST"&gt;&lt;/form&gt;
+				</code>
+				
+				<h3>In the above example, we've created the skeleton for a &lt;form&gt; that will send information to example.html as a POST request. The action attribute determines where the information is 
+				sent and the method attribute is assigned a HTTP verb that is included in the HTTP request. HTTP verbs like POST do not need to be capitalised for the request to work, but it's done so 
+				out of convention. The &lt;form&gt; element can also contain child elements. For instance, it would be helpful to provide a header so that users know what this &lt;form&gt; is about. <br>We could also 
+				add a paragraph to provide even more detail:</h3>
+				
+				<code>
+					&lt;form action="/example.html" method="POST"&gt;<br>
+						<div class="indent">&lt;h1&gt;Creating a form&lt;/h1&gt;<br></div>
+						<div class="indent">&lt;p&gt;Looks like you want to learn how to create an HTML form. Well, the best way to learn is to <div class="indent">play around with it.&lt;/p&gt;</div></div>
+					&lt;/form&gt;
+				</code>
+				
+
+			</div>
+			
+			<!---------------------------------<INPUT> TYPE NAME VALUE ATTRIBUTES---------------------->
+									
+			<div class="grid input-tag">
+				
+				<br>
+				
+				<span class="faded-line"></span>
+				
+				<br>
+				
+				<h2>Input Tag and it's Attributes</h2>
+			
+				<h3>If we want to create an input field in our &lt;form&gt;, we'll need the help of the &lt;input&gt; element.The &lt;input&gt; element has a type attribute which determines how it renders on the web page and
+				what kind of data it can accept. When we create an &lt;input&gt; element with type="text", it renders a text field that users can type into. It's also important that we include a name attribute for the &lt;input&gt; — without 
+				the name attribute, information in the &lt;input&gt; won't be sent when the &lt;form&gt; is submitted. </h3>
+			
+				<code>
+					&lt;form action="/example.html" method="POST"&gt;<br>
+						<div class="indent">&lt;input type="text" name="first-text-field"&gt;<br></div>
+					&lt;/form&gt;	
+				</code>
+				
+				<h3>
+					After users type into the &lt;input&gt; element, the value of the value attribute becomes what is typed into the text field. The value of the value attribute is paired with the value of the name attribute and sent as text when the form
+					is submitted. For instance, if a user typed in "important details" in the text field created by our &lt;input&gt; element:
+				</h3>
+				
+				<div style="text-align: center;"><img src="images/importantdetails.png"/></div>
+				
+				<h3>When the form is submitted, the text: "first-text-field=important details" is sent to /example.html. We could also assign a default value for the value attribute so that users have a pre-filled text field when they first see the rendered
+				form like so:</h3>
+				
+				<code>
+					&lt;form action="/example.html" method="POST"&gt;<br>
+						<div class="indent">&lt;input type="text" name="first-text-field" value="already pre-filled"&gt;<br></div>
+					&lt;/form&gt;
+				</code>
+			
+			</div>
+				
+			<!---------------------------------<LABEL> FOR AND ID ATTRIBUTE---------------------->
+			
+			<div class="grid label-tag">
+				
+				<br>
+				
+				<span class="faded-line"></span>
+				
+				<br>
+				
+				<h2>Label Tag</h2>
+				
+				<h3>For a user to properly identify an &lt;input&gt; we use the appropriately named &lt;label&gt; element. To associate a &lt;label&gt; and an &lt;input&gt;, the &lt;input&gt; needs an id attribute. We then assign the for attribute of the &lt;label&gt; element with the value of the id attribute 
+				of &lt;input&gt;, like so:</h3>
+							
+				<code>
+					&lt;form action="/example.html" method="POST"&gt;
+						<div class="indent">&lt;label for="meal">What do you want to eat?&lt;/label&gt;</div>
+						<div class="indent">&lt;br&gt;</div>
+						<div class="indent">&lt;input type="text" name="food" id="meal"&gt;</div>
+					&lt;/form&gt;
+				</code>
+				
+				<h3>The code above renders:</h3>
+				
+				<div style="text-align: center;"><img src="images/whatdoyouwanttoeat.jpg"/></div>
+				
+			</div>
+			
+			<!---------------------------------FORM CHARACTERISTICS---------------------->
+						
+			<div class="grid characteristics">
+				
+				<br>
+				
+				<span class="faded-line"></span>
+				
+				<br>
+				<h2>Various Form Characteristics</h2>
+				
+				<h3><strong>Passwords</strong></h3>
+				
+				<h3>An &lt;input type ="password"&gt; element will replace input text with another character like an asterisk (*) or a dot (•).</h3>
+				
+				<h3><strong>Arrows</strong></h3>
+				
+				<h3>By setting type="number" for an &lt;input&gt; we can restrict what users type into the input field to just numbers (and a few special characters like -, +, and .). We can also
+				provide a step attribute which creates arrows inside the input field to increase or decrease by the value of the step attribute.</h3>
+				
+				<h3><strong>Slider</strong></h3>
+				
+				<h3>Another option we could use is setting type to "range" which creates a slider. To set the minimum (min) and maximum (max) values of the slider we 
+				assign values to the min and max attribute of the &lt;input>. </h3>
+				
+				<code>
+					&lt;form&gt;
+						<div class="indent">&lt;label for="volume"&gt; Volume Control&lt;/label&gt;</div>
+						<div class="indent">&lt;input id="volume" name="volume" type="range" min="0" max="100" step="1"&gt;</div>
+					&lt;/form&gt;
+				</code>
+				
+				<h3><strong>Checkbox</strong></h3>
+				
+				<h3>In a &lt;form&gt; we would use the &lt;input&gt; element and set type="checkbox"</h3>
+				
+				<code>
+					&lt;form&gt;
+						<div class="indent">&lt;p&gt;Choose your pizza toppings:&lt;/p&gt;</div>
+							<div class="indent2">&lt;label for="cheese"&gt;Extra cheese&lt;/label&gt;</div>
+							<div class="indent2">&lt;input id="cheese" name="topping" type="checkbox" value="cheese"&gt;</div>
+							<div class="indent2">&lt;br&gt;</div>
+							<div class="indent2">&lt;label for="pepperoni"&gt;Pepperoni&lt;/label&gt;</div>
+							<div class="indent2">&lt;input id="pepperoni" name="topping" type="checkbox" value="pepperoni"&gt;</div>
+							<div class="indent2">&lt;br&gt;</div>
+							<div class="indent2">&lt;label for="anchovy"&gt;Anchovy&lt;/label&gt;</div>
+							<div class="indent2">&lt;input id="anchovy" name="topping" type="checkbox" value="anchovy"&gt;</div>
+						&lt;/form&gt;
+				</code>
+				
+				<h3><strong>Drop Down List</strong></h3>
+				
+				<h3>An alternative solution to loads to radio buttons is to use a dropdown list to allow our users to choose one option from an organized list</h3>
+				
+				<code>
+					&lt;form&gt;
+						<div class="indent">&lt;label for="lunch"&gt;What's for lunch?&lt;/label&gt;</div>
+						<div class="indent">&lt;select id="lunch" name="lunch"&gt;</div>
+							<div class="indent2">&lt;option value="pizza">Pizza&lt;/option&gt;</div>
+							<div class="indent2">&lt;option value="curry">Curry&lt;/option&gt;</div>
+							<div class="indent2">&lt;option value="salad">Salad&lt;/option&gt;</div>
+							<div class="indent2">&lt;option value="ramen">Ramen&lt;/option&gt;</div>
+							<div class="indent2">&lt;option value="tacos">Tacos&lt;/option&gt;</div>
+						<div class="indent">&lt;/select&gt;</div>
+					&lt;/form&gt;
+				</code>
+				
+				<h3>Notice in the code that we're using the element &lt;select&gt; to create the dropdown list. To populate the dropdown list, we add multiple &lt;option> elements, each with a value attribute. 
+				For instance, if a user selected Pizza from the dropdown list, the information would be sent as "lunch=pizza".</h3>
+				
+				<h3><strong>Submit Button</strong></h3>
+				
+				<h3>To make a submit button in a &lt;form&gt;, we're going to use the reliable &lt;input&gt; element and set the type to "submit". For instance:</h3>
+				
+				<code>
+					&lt;form&gt;
+						<div class="indent">&lt;input type="submit" value="Send"&gt;</div>
+					&lt;/form&gt;
+				</code>
+				
+				<br>
+				
+				<img src="images/send.png"/>
+				
+				<h3><strong>Non Optional Fields</strong></h3>
+				
+				<h3>To enforce a non-optional field in a form we can add the required attribute to an &lt;input&gt; element.</h3>
+				
+				<code>
+					&lt;form action="/example.html" method="POST"&gt;
+						<div class="indent">&lt;label for="allergies"&gt;Do you have any dietary restrictions?&lt;/label&gt;</div>
+						<div class="indent">&lt;br&gt;</div>
+						<div class="indent">&lt;input id="allergies" name="allergies" type="text" required&gt;</div>
+						<div class="indent">&lt;br&gt;</div>
+						<div class="indent">&lt;input type="submit" value="Submit"&gt;</div>
+					&lt;/form&gt;
+				</code>
+				
+				<br>
+				
+				<div style="text-align: center;"><img src="images/requiredfield.png"/></div>
+				
+				<h3><strong>MIN and MAX Values For a Number Field</strong></h3>
+				
+				<h3>Another built-in validation we can use is to assign a minimum or maximum value for a number field. To set a minimum acceptable value, we use the min attribute and assign a value. On the flip side, to set 
+				a maximum acceptable value, we assign the max attribute a value.</h3>
+				
+				<code>
+					&lt;form action="/example.html" method="POST"&gt;
+						<div class="indent">&lt;label for="guests">Enter # of guests:&lt;/label&gt;</div>
+						<div class="indent">&lt;input id="guests" name="guests" type="number" min="1" max="4"&gt;</div>
+						<div class="indent">&lt;input type="submit" value="Submit"&gt;</div>
+					&lt;/form&gt;
+				</code>
+				
+				<div style="text-align: center;"> <img src="images/minmax.png"/> </div>
+				
+				<h3>As shown, if a user tries to submit an input that is less than 1 a warning will appear.</h3>
+				
+				<span class="faded-line"></span>	
+	
+				<br><br>
+				
+				<h3><a class="bottom-link" href="https://www.w3schools.com/html/html_forms.asp">Click here</a> to learn more indepth about HTML forms.</h3>
+				
+				<br><br>
+				
+			</div>
+			
+		
+		</div>
+	
+	<script>
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			document.getElementById("button").style.display = "block";
+		} else {
+			document.getElementById("button").style.display = "none";
+		}
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+	</script>
+
+	</body>
+	
+</html>

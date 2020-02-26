@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Louie's Coding Camp - Ask Me!.">
+		
+        <title>Ask Me!</title>
+		
+        <link rel="stylesheet" type="text/css" href="AskMe.css">
+		
+    </head>
+	
+	<body>
+		
+		<div class="grid-container">
+		
+			<button onclick="topFunction()" id="button" title="Go to top">Top</button>
+		
+			<div class="top left side"></div>
+            <div class="top right side"></div>
+			
+			<div class="bottom left side"></div>
+            <div class="bottom right side"></div>
+		
+			<!----------------------------------HEADER---------------------->
+			
+			<div class="grid header">				
+						
+				<!----SITE LOGO----->
+				<div class="grid logo"><img src="images/logo.jpg" height="100" width="100"/></div>
+				
+				<!----SITE NAME----->
+				<div class="grid name">
+					<a href="./LandingPage.html"><p class="LogoName">LOUIE'S <strong>CODE CAMP</strong></p></a>
+				</div>
+				
+				<!----NAV BAR----->
+				<div class="grid nav">
+					<ul class="top">
+						<a href="./BoxModel.html"><li>The Box Model</li></a>
+						<a href="./Forms.html"><li>Forms</li></a>
+						<li>Grids</li>
+						<li class="chosen">"Ask Me!</li>
+					</ul>
+				</div>
+						
+			</div>
+						
+			<!-----------------------------------MAIN------------------------------>
+
+			<div class="grid main text">
+						
+				<h2>Ask Me!</h2>
+				
+				<h3>Please submit any questions you have about the website and/or its contents or any suggestions on how to improve the website.
+				</h3>
+			
+			</div>
+				
+			<div class="grid main form">
+				<form>
+					<label for="blog">Question: </label>
+					<br>
+					<textarea id="blog" name="blog" rows="5" cols="30">
+					</textarea>
+				</form>
+				
+				<form>
+					<input type="submit" value="Send">
+				</form>
+				
+			</div>
+			
+			<!----------------------------------DIVIDER---------------------->
+			
+			<div class="grid divider">
+				<img src="images/CLOUDDIVIDER.jpg" height="100" width="1200"/>
+			</div>
+			
+		
+		</div>
+	
+	<script>
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			document.getElementById("button").style.display = "block";
+		} else {
+			document.getElementById("button").style.display = "none";
+		}
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+	</script>
+
+	</body>
+	
+</html>
